@@ -9,7 +9,7 @@ export default {
 
     mutations: {
         [SET_PRODUCTS] (state, products){
-            state.products = products
+            state.products = products.items
         }
     },
     

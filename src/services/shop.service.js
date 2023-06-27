@@ -1,34 +1,34 @@
 import { api } from './api.service'
 
 export async function getProducts(params) {
-    await api.get('/products', 
+    return (await api.get('/products', 
         {
             params
         }
-    )
+    )).data
 }
 
 export async function getProduct(id, params) {
-    await api.get(`/products/${id}`, 
+    return (await api.get(`/products/${id}`, 
         {
             params
         }
-    )
+    )).data
 }
 
 export async function getCategories(params) {
-    await api.get('/categories', 
+    return (await api.get('/categories', 
         {
             params
         }
-    )
+    )).data
 }
 
 export async function getCategory(id, params) {
-    await api.get(`/categories/${id}`, 
+    return (await api.get(`/categories/${id}`, 
         {
             params
         }
-    )
+    )).data
 }
 
