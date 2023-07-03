@@ -20,8 +20,8 @@ export default {
     },
 
     actions: {
-        async [GET_PRODUCT] ({commit}){
-            const product = await getProduct()
+        async [GET_PRODUCT] ({commit}, id ){
+            const product = await getProduct(id)
             commit(SET_PRODUCT, product)
         }
     },

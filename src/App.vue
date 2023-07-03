@@ -2,7 +2,10 @@
   <div id="app">
     <v-app>
       <v-app-bar app>
-        MLM-test-shop
+        <router-link :to="{ name: 'home' }">
+          <v-card-title class="cyan--text text--darken-3">MLM-test-shop</v-card-title>
+        </router-link>
+        <cart-button />
       </v-app-bar>
       <v-main>
         <router-view></router-view>
@@ -12,10 +15,18 @@
 </template>
 
 <script>
+import CartButton from './components/CartButton.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    CartButton
+  }
 }
 </script>
 
 <style>
+.v-toolbar__content {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

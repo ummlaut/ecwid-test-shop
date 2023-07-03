@@ -24,11 +24,3 @@ export async function getCategories(params) {
     )).data
 }
 
-export async function getCategory(id, params) {
-    return (await api.get(`/categories/${id}`, 
-        {
-            params
-        }
-    )).data
-}
-

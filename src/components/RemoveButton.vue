@@ -2,7 +2,7 @@
     <v-btn @click="$emit('click')"
       depressed
       outlined
-      color="buy">
-      Купить
+      color="remove">
+      Удалить
     </v-btn>
 </template>
